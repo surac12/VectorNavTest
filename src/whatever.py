@@ -3,7 +3,7 @@ import time
 #poopt test
 # Open the serial port
 try:
-    ser = serial.Serial('COM3', 115200, timeout=1)
+    ser = serial.Serial('/dev/ttyUSB0', 115200, timeout=1)
     ser.flushInput()  # Clear old data
 except serial.SerialException as e:
     print(f"Error opening serial port: {e}")
